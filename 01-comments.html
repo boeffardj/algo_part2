@@ -26,15 +26,19 @@
     </button>
 </div>
 
+
 <script type="text/javascript">
+    /* fonction pour récupere le nom et prénom pour faire un affichage */
     function displayMessage() {
         let firstname = document.getElementById("firstname").value;
         let lastname = document.getElementById("lastname").value;
+        /* on met le nom de famille en majuscule grâce a la méthode toUpperCase()*/
         let fullname = firstname + " " + lastname.toUpperCase();
         let message = "Bonjour " + fullname;
 
         alert(message)
     }
+    
 </script>
 </body>
 </html>
