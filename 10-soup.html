@@ -61,22 +61,37 @@
 </div>
 
 <script type="text/javascript">
-    function doYouLikeIt() {
-        // CODE HERE !
+    function doYouLikeIt() { if ((carrots.checked || tomatoes.checked || potatoes.checked == true) && (black_chocolate.checked || white_chocolate.checked == true) && (cyanide.checked || vitriol.checked == false)) {
+            alert("Beurk... c'est pas bon !")
+        }
+        else if (cyanide.checked || vitriol.checked == true) {
+            alert("Game over...")
+        }
+        else if (carrots.checked || tomatoes.checked || potatoes.checked == true) {
+            alert("Hum la bonne sou-soupe salée !")
+        }
+        else if (black_chocolate.checked || white_chocolate.checked == true) {
+            alert("Hum la bonne sou-soupe sucrée !")
+        }
     }
+    
 
     function isSalty() {
         let carrots = document.getElementById("carrots").checked;
-        // CODE HERE !
+        let tomatoes = document.getElementById("tomatoes").checked;
+        let potatoes = document.getElementById("potatoes").checked;
     }
 
     function isSweet() {
-        // CODE HERE !
+        let black_chocolate = document.getElementById("black-chocolate").checked;
+        let white_chocolate = document.getElementById("white-chocolate").checked;
     }
 
     function isPoisoned() {
-        // CODE HERE !
+        let cyanide = document.getElementById("cyanide").checked;
+        let vitriol = document.getElementById("vitriol").checked;
     }
+
 </script>
 </body>
 </html>
