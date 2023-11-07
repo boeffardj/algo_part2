@@ -42,8 +42,15 @@
     function cartValue() {
         let articles = document.getElementById("articles");
         let selectedArticle = articles.options[articles.selectedIndex].value;
-
-        // CODE HERE !
+     if (articles.value == "one")
+     if ( VALID_PROMOTION_CODE == "10POUR100"){
+     (30*0.1)
+     alert("La valeur de votre panier est de 27€")
+    }
+    else if (articles.value == "two"){
+            alert("Les deux formations coûtent 50€")
+    }
+    else return false
     }
 </script>
 </body>
