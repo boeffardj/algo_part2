@@ -43,12 +43,7 @@
     let value = document.getElementById("value"); 
     let selectedCurrency = currencies.options[currencies.selectedIndex].value;
 
-    if (selectedCurrency == "eur") {
-        alert(value.value + " Euros -> " + Math.round((value.value*change)*100)/100 + " Dollars")
-    }
-    else if (selectedCurrency == "usd") {
-        alert(value.value + " Dollars -> " + Math.round((value.value/change)*100)/100 + " Euros")
-    }
+
 
     // 1 EUR = 1.0729 USD
     // CODE HERE !

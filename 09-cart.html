@@ -42,14 +42,18 @@
     function cartValue() {
         let articles = document.getElementById("articles");
         let selectedArticle = articles.options[articles.selectedIndex].value;
-     if (articles.value == "one")
-     if ( VALID_PROMOTION_CODE == "10POUR100"){
-     (30*0.1)
+        let VALID_PROMO = document.getElementById("promotion");
+     /* appel de la variable article et de l'option "one"si l'article choisis est l'option "one" alors possibilité d'appeler la variable VALID_PROMO
+     et verifier si le code que l'utilisateur renseigne est bien compatible avec le code 10POUR100* EN VERIFIANT AVEC LA CONSTANTE VALID_PROMOTION_CODE*/
+        if ((articles.value == "one")&&( VALID_PROMO.value == VALID_PROMOTION_CODE)){
      alert("La valeur de votre panier est de 27€")
     }
-    else if (articles.value == "two"){
-            alert("Les deux formations coûtent 50€")
+   /* appel de la variable article et de l'option "two"  d'appeler la variable VALID_PROMO
+     et verifier si le code que l'utilisateur renseigne est bien compatible avec le code 10POUR100* EN VERIFIANT AVEC LA CONSTANTE VALID_PROMOTION_CODE*/
+    else if ((articles.value == "two")&&( VALID_PROMO.value == VALID_PROMOTION_CODE)){
+            alert("Les deux formations coûtent 45€")
     }
+    /* Sinon return false */
     else return false
     }
 </script>

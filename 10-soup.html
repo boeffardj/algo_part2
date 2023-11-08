@@ -61,36 +61,53 @@
 </div>
 
 <script type="text/javascript">
-    function doYouLikeIt() { if ((carrots.checked || tomatoes.checked || potatoes.checked == true) && (black_chocolate.checked || white_chocolate.checked == true) && (cyanide.checked || vitriol.checked == false)) {
-            alert("Beurk... c'est pas bon !")
-        }
-        else if (cyanide.checked || vitriol.checked == true) {
+    function doYouLikeIt() { 
+  let salty = isSalty()
+  let sweet = isSweet()
+  let poisoned = isPoisoned()
+            /*apppel des variables de la fonction isSweet si l'un ou plusieurs des choix sont choisit alors afficher le message "Hum la bonne sou-soupe sucrée !"*/
+
+        if (poisoned ) 
+        {
             alert("Game over...")
+            
         }
-        else if (carrots.checked || tomatoes.checked || potatoes.checked == true) {
+          /* apppel des variables de la fonction isPoisoned si l'un ou l'autre si une des deux variables est choisis afficher le message "Game over..."*/ 
+        else if (salty && sweet) {
+            alert("Beurk... c'est pas bon !")
+          
+        }
+        /*apppel des variables de la fonction isSalty si l'un ou plusieurs des choix sont choisit alors afficher le message "Hum la bonne sou-soupe salée !" */
+        else if (salty) {
             alert("Hum la bonne sou-soupe salée !")
         }
-        else if (black_chocolate.checked || white_chocolate.checked == true) {
+       /* apppel des variables des fonction isSalty et isSweet et vérifier si plusieurs choix des deux fonctions sont choisis alors envoyer le message "Beurk... c'est pas bon !" */
+        else if (sweet) 
+        {  
             alert("Hum la bonne sou-soupe sucrée !")
-        }
+            
+         }
     }
+    
     
 
     function isSalty() {
         let carrots = document.getElementById("carrots").checked;
         let tomatoes = document.getElementById("tomatoes").checked;
         let potatoes = document.getElementById("potatoes").checked;
-    }
+    return carrots || tomatoes || potatoes}
+
 
     function isSweet() {
         let black_chocolate = document.getElementById("black-chocolate").checked;
         let white_chocolate = document.getElementById("white-chocolate").checked;
-    }
+   return black_chocolate || white_chocolate }
 
     function isPoisoned() {
         let cyanide = document.getElementById("cyanide").checked;
         let vitriol = document.getElementById("vitriol").checked;
-    }
+   return cyanide || vitriol }
+
 
 </script>
 </body>
