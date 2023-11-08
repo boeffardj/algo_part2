@@ -26,11 +26,14 @@
 </div>
 
 <script type="text/javascript">
-        // fonction pour recupere le nombre preferer de l'utilisateur puis faire un affichage
-
+        /* fonction pour recupere le nombre preferer de l'utilisateur
+        * Ajouter 1
+        *Faire affichage nombre choisis +1 
+        * parseINT pour le transformer en chiffre entier */ 
     function incrementNumber() {
-        let number = document.getElementById("number").value;
-        alert(++number)
+        let number = parseInt(document.getElementById("number").value);
+       number += 1;
+        alert(number);
         // CODE HERE !
     }
 </script>

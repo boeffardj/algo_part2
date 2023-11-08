@@ -28,11 +28,13 @@
 
 
 <script type="text/javascript">
-    /* fonction pour récupere le nom et prénom pour faire un affichage */
+    /* fonction pour récupere la valeur de l'input name ( "firstname" et "lastname")
+    * Faire un affichage */
     function displayMessage() {
         let firstname = document.getElementById("firstname").value;
         let lastname = document.getElementById("lastname").value;
-        /* on met le nom de famille en majuscule grâce a la méthode toUpperCase()*/
+        /* on met le nom de famille en majuscule grâce a la méthode  toUpperCase() 
+        *A jouter la chaine firstname et lastname en les séparant par "" */
         let fullname = firstname + " " + lastname.toUpperCase();
         let message = "Bonjour " + fullname;
 

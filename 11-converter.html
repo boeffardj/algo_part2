@@ -38,16 +38,26 @@
 </div>
 
 <script type="text/javascript">
-    function converter() {
-        const change = 1.0729;
-    let value = document.getElementById("value"); 
-    let selectedCurrency = currencies.options[currencies.selectedIndex].value;
-
-
-
+   
     // 1 EUR = 1.0729 USD
-    // CODE HERE !
+   const eur_usd = "1.079";
+
+   function converter() {
+    let selectedCurrency = currencies.options[currencies.selectedIndex].value;        let value = document.getElementById("value").value;
+        
+        if (selectedCurrency === "eur") {
+        let converted_to_usd = value * eur_usd;
+    converted_to_usd = converted_to_usd.toFixed(2);
+    alert("La valeur de " + document.getElementById("value").value + '\u20AC' + " en Dollars est de " + converted_to_usd + '\u0024')
+        }
+        else if ( selectedCurrency === "usd") {
+            let converted_to_eur = value / eur_usd;
+        converted_to_eur = converted_to_eur.toFixed(2);
+        alert("La valeur de " + document.getElementById("value").value + '\u0024' + " en Euros est de " + converted_to_eur + '\u20AC')
+        }
     }
+
+    // CODE HERE !
 </script>
 </body>
 </html>
