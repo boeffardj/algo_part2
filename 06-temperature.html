@@ -29,12 +29,14 @@
 </div>
 
 <script type="text/javascript">
-   
-   const MELTING_POINT = 12;
+   /*changement du metling point */
+   const MELTING_POINT = 100;
+
 
     function solidOrLiquid() {
+        //changement du é en e de temperature 
        let temperature = document.getElementById("temperature").value
-//changement du é en e de temperature 
+
         if(temperature > MELTING_POINT) {
             alert("C'est de l'eau liquide !");
         } else {

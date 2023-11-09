@@ -41,15 +41,19 @@
         function primaryColors() {
             let colors = document.getElementById("colors");
             let secondaryColor = colors.options[colors.selectedIndex].value;
-            /* chercher la  variable colors plus appeler l'option des couleurs primaires */
-            if (colors.value == "green") {
+            /* chercher la  variable secondaryColor  
+            *appeler l'option des couleurs primaires */
+            if (secondaryColor === "green") {
                 alert("Le vert est composé de jaune et bleu")
             }
-            else if (colors.value == "purple") {
+            else if (secondaryColor === "purple") {
                 alert("Le violet est composé de bleu et de rouge")
             }
-            else {
+            else if  (secondaryColor === "orange"){
                 alert("L'orange est un mélange de rouge et jaune")
+            }
+            else {
+                alert("cette couleur n'est pas valide ");
             }
             // CODE HERE !
         }

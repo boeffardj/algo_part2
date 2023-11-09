@@ -34,20 +34,22 @@
 </div>
 
 <script type="text/javascript">
-   /*fonction qui sert a verifier l'age sur le site */
+   /*fonction qui sert a verifier l'age sur le site 
+   *Definir avec la constante l'age de la majorité
+   *Si l'age est inferieur a la constante afficher le message "Vous devez être majeur pour accèder au site !"
+   *Sinon afficher le message "Bienvenue sur le site"
+   */
+   const MAJORITY = 18;
    function verifyAge() {
 
         let age = document.getElementById("age").value;
-        if (age < 18){
+        if (age < MAJORITY ){
         alert("Vous devez être majeur pour accèder au site !");
         }
         else {
           alert("Bienvenue sur le site") 
         }
-        
-
-        // CODE HERE !
-    }
+        }
 </script>
 </body>
 </html>
